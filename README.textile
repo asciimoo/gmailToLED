@@ -1,0 +1,21 @@
+**Gmail to LED** - display new email alert in keyboard leds [under linux].
+
+
+(C) 2010 by Adam Tauber <asciimoo@gmail.com>
+Licensed under the GNU Affero General Public License v3
+
+
+DEPENDENCIES:
+ * ledcontrol/ledd - http://sampo.kapsi.fi/ledcontrol/
+ * python
+
+
+INSTALL:
+ * install ledcontrol - in debian like systems: @apt-get install ledcontrol@
+ * start ledd daemon - e.g. @/etc/init.d/ledd start@
+ * edit gmailToLED.py
+ ** fill @LEDD_PIPE@, @USERNAME@, @PASSWORD@ variables in gmailToLED.py
+ * add script to your crontab
+ ** @crontab -e@
+ ** crontab content to check mail in every minutes: @* * * * * /path/to/your/gmailToLED.py@
+
